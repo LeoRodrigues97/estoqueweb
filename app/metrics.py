@@ -15,10 +15,10 @@ def get_product_metrics():
     total_profit = total_selling_price - total_cost_price
 
     return dict(
-        total_cost_price=number_format(total_cost_price, decimal_pos=2, force_grouping=True),
-        total_selling_price=number_format(total_selling_price, decimal_pos=2, force_grouping=True),
+        total_cost_price=number_format(total_cost_price, decimal_pos=0, force_grouping=True),
+        total_selling_price=number_format(total_selling_price, decimal_pos=0, force_grouping=True),
         total_quantity=total_quantity,
-        total_profit=number_format(total_profit, decimal_pos=2, force_grouping=True),
+        total_profit=number_format(total_profit, decimal_pos=0, force_grouping=True),
     )
 
 
@@ -32,8 +32,8 @@ def get_sales_metrics():
     return dict(
         total_sales=total_sales,
         total_products_sold=total_products_sold,
-        total_sales_value=number_format(total_sales_value, decimal_pos=2, force_grouping=True),
-        total_sales_profit=number_format(total_sales_profit, decimal_pos=2, force_grouping=True),
+        total_sales_value=number_format(total_sales_value, decimal_pos=0, force_grouping=True),
+        total_sales_profit=number_format(total_sales_profit, decimal_pos=0, force_grouping=True),
     )
 
 
